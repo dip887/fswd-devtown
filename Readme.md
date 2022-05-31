@@ -1,4 +1,4 @@
-#Event listener part:
+#Event listener and todolist part(index.html):
 const button = document.querySelector('button')
 const container = document.querySelector('div')
 const body = document.querySelector('body')
