@@ -54,10 +54,9 @@ const getRecipe = async (query) => {
       </div>`;
 
       // console.log(ele);
+      loading(false);
       recipeList.appendChild(ele);
     });
-
-    loading(false);
   } catch (error) {
     loading(false);
     console.log(error);
@@ -72,3 +71,7 @@ const searchRecipe = () => {
 };
 
 button.addEventListener("click", searchRecipe);
+
+input.addEventListener("keypress", (e) =>
+  e.key == "Enter" ? searchRecipe() : null
+);
