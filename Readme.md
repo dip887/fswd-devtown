@@ -1,16 +1,11 @@
-#Event listener and todolist part(index.html):
-const button = document.querySelector('button')
-const container = document.querySelector('div')
-const body = document.querySelector('body')
+## url = "https://ornate-eclair-ed7d12.netlify.app/"
 
-const callback = (e) => {
-const {offsetX:x, offsetY:y} = e
-// console.log({x,y})
-const ele = document.createElement('div')
-ele.style = `width:3px; height:3px; position:absolute; left:${x}px; top:${y}px; background: black; `
-body.appendChild(ele)
+Day-33: edamam.com website
+Application ID:
+da5363b6
+Application Keys:
+e87bb4c7ed839361b2ea344e795b746d
 
-}
+### Creative work: https://statuesque-sfogliatella-a71d95.netlify.app
 
-body.addEventListener('mousemove', callback)
-(click, keydown, and many more)
+### 2. https://roaring-stardust-7bcdc8.netlify.app
