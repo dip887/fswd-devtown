@@ -8,7 +8,7 @@
 /*Scoreboard style */
 
 div.scoreboard {
-    margin: 20px;
+    margin: 50px 0px 0px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +43,16 @@ div.scoreboard div.comp::after {
     border-radius: 5px;
 }
 
+/* message box styling */
+
+div.message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin: 20px;
+    text-align: center;
+}
 
 
 /* options styles */
