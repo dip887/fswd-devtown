@@ -1,20 +1,27 @@
 {
-  "name": "demo",
+  "name": "demo-2",
   "version": "1.0.0",
-  "description": "This is our first node.js project",
+  "description": "this is new node file with express framework",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dip887/fswd-devtown.git"
   },
-  "author": "dipanshu garg",
+  "author": "Dipanshu Garg",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dip887/fswd-devtown/issues"
+  },
+  "homepage": "https://github.com/dip887/fswd-devtown#readme",
   "dependencies": {
-    "axios": "^0.27.2",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.16"
   }
 }
