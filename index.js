@@ -2,10 +2,45 @@ const { Router } = require("express");
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const { something, isAuthorised } = require("./middlewares/index");
+const shortid = require("shortid");
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use(express.json());
+// app.use(something);
+
+/*
+TYPE: POST
+PARAMS: Null
+QUERY: count
+Body: email
+DESCRIPTION: route to create a user
+*/
+
+app.post("/user", (req, res) => {
+  try {
+    const { email } = req.body;
+    const users = JSON.parse(
+      fs.readFileSync(path.join(__dirname, "users.json"), { encoding: "UTF-8" })
+    );
+
+    const user = {
+      email,
+      api_key: shortid.generate(),
+    };
+
+    users.push(user);
+    fs.writeFileSync(path.join(__dirname, "users.json"), JSON.stringify(users));
+    console.log(users);
+    res.send(user);
+  } catch (error) {
+    console.log(error.message);
+    res.send(error.message);
+  }
+});
 
 /*
 TYPE: GET
@@ -14,7 +49,7 @@ QUERY: Count
 DESCRIPTION: route to fetch all todo
 */
 
-app.get("/todos", (req, res) => {
+app.get("/todos", isAuthorised, (req, res) => {
   try {
     const todos = JSON.parse(
       fs.readFileSync(path.join(__dirname, "db.json"), { encoding: "UTF-8" })

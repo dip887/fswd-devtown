@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/dip887/fswd-devtown#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
